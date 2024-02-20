@@ -51,8 +51,8 @@ todolist.addEventListener("click", (e) => {
           return {
             ...item,
             name: updateName,
-            description: updateDes,
-            price: updatePrice,
+            description: updateDes !== "" ? updateDes : item.description,
+            price: updatePrice !== "" ? updatePrice : item.price,
           };
         }
       } else {
